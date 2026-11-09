@@ -8,8 +8,8 @@ Unlike simple collaborative filtering, **CineMatch AI** uses a **Content-Based F
 
 
 ## 🚀 Key Features
-* **ML Engine:** Uses **TF-IDF Vectorization** and **Cosine Similarity** to compute movie relationships in a 5,000-dimensional vector space.
-* **High-Performance API:** Powered by **FastAPI** for asynchronous, low-latency (<50ms) inference serving.
+* **ML Engine:** Uses **Bag-of-Words vectorisation** (`CountVectorizer`, 5,000 features) and **Cosine Similarity** to compare all 4,806 movies.
+* **Fast API:** Powered by **FastAPI**, with the similarity matrix pre-computed and loaded once at startup, so each recommendation is a quick lookup.
 * **Model Persistence:** Implements efficient serialization (pickling) to load pre-computed similarity matrices instantly on startup.
 * **Modern Frontend:** A responsive, "cinematic" UI built with **React.js (Vite)** and **Tailwind CSS**.
 * **Robust Data Pipeline:** Custom preprocessing pipeline to clean and unify complex JSON metadata from the TMDB 5000 dataset.
